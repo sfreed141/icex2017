@@ -65,8 +65,8 @@ def main():
 
     log_filename = sys.argv[1]
     log_data = read_log(log_filename)
-    # plot_raw(log_data)
-    plot_filtered(log_data)
+    plot_raw(log_data)
+    # plot_filtered(log_data)
 
 if __name__ == '__main__':
     main()
