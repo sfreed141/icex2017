@@ -24,7 +24,7 @@ source_pc = pcl.PointCloud(source.astype(np.float32))
 target = np.dot(transform, source.T).T
 target_pc = pcl.PointCloud(target.astype(np.float32))
 
-converged, transf, estimate, fitness = icp(source_pc, target_pc, max_iter=1000)
+converged, transf, estimate, fitness = icp(source_pc, target_pc, max_iter=10000)
 
 print(converged, transf, estimate, fitness)
 result = estimate.to_array()
